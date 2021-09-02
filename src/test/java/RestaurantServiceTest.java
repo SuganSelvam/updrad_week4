@@ -1,12 +1,7 @@
-
-
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.BeforeEach;
-
-import java.time.LocalTime;
-
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.time.LocalTime;
 
 class RestaurantServiceTest {
 
@@ -27,7 +22,7 @@ class RestaurantServiceTest {
     @Test
     public void searching_for_existing_restaurant_should_return_expected_restaurant_object() throws restaurantNotFoundException {
         Restaurant result = service.findRestaurantByName("Amelie's cafe");
-        Assertions.assertEquals(restaurant,result);
+        Assertions.assertEquals(restaurant.getName(),result.getName());
     }
 
     @Test

@@ -1,7 +1,6 @@
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class RestaurantService {
     private static List<Restaurant> restaurants = new ArrayList<>();
@@ -11,8 +10,7 @@ public class RestaurantService {
         for (Restaurant restaurant : allRestaurants) {
             if(restaurantName.equals(restaurant.getName()))
                 return restaurant;
-        }
-        return null;
+        }throw new restaurantNotFoundException(restaurantName);
     }
 
 
